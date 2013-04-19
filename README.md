@@ -11,15 +11,18 @@ OS X is incredibly easily scriptable as it turns out.
 There's three parts to the Cleeks "app".
 
 - just3ws.cleeks.plist.template
+
   This is the launchctl manifest that runs cleek.sh on a regular interval. I arbitrarily chose 32 seconds for my default interval.
 - bin/install.sh
+
   This generates a plist from the template file then (re)installs just3ws.cleeks.plist
 - bin/cleek.sh
-  Does a few things:
--- creates a directory in at ~/Dropbox/Cleeks/hosts/CURRENT_HOST/CURRENT_USER
--- takes a screenshot if the screensaver isn't running
--- tidys up previous screenshots into directories grouped by day
--- archives previous days of screenshots into zip files
+
+  In a nutshell:
+  - Creates a directory in at ~/Dropbox/Cleeks/hosts/CURRENT_HOST/CURRENT_USER
+  - Takes a screenshot if the screensaver isn't running
+  - Tidys up previous screenshots into directories grouped by day
+  - Archives previous days of screenshots into zip files
 
 ## Installation
 
