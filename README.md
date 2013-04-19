@@ -1,6 +1,6 @@
 # Cleeks
 
-One app that I really missed from my Microsoft usin' days is TimeSnapper. TimeSnapper was a time-tracking application that took screenshots on a regular interval and let you add information about the work you were doing at the time. I only really ever cared about the screenshots and on more than one occasion being able to see what was on my screen several minutes ago was a major sanity saver.
+One app that I really miss from my Microsoft using days is TimeSnapper. TimeSnapper was a time-tracking application that took screenshots on a regular interval and let you add information about the work you were doing at the time. I only really ever cared about the screenshots and on more than one occasion being able to see what was on my screen several minutes ago was a major sanity saver.
 
 Unfortunately there was no equivalent on OS X. :( So, I dug in and looked at what it would take to implement the basic functionality that I missed.
 
