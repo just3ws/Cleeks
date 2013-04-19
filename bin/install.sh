@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 rm -f just3ws.cleek.plist
 sed "s/USER_HOME/\/Users\/`whoami`/g" just3ws.cleek.plist.template > just3ws.cleek.plist
