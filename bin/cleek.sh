@@ -1,13 +1,16 @@
 #!/bin/bash -e
 
+
 function is_screensaver_running () {
   osascript -e 'tell application "System Events"'         \
             -e 'get running of screen saver preferences'  \
             -e 'end tell'
 }
 
-mkdir -p "$HOME/Dropbox/Cleeks/hosts/`hostname -s`/`whoami`"
-cd "$HOME/Dropbox/Cleeks/hosts/`hostname -s`/`whoami`"
+working_dir="$HOME/Dropbox/Cleeks/hosts/`hostname -s`/`whoami`"
+mkdir -p $working_dir
+cd $working_dir
+echo $working_dir >> ~/just3ws-cleeks.log
 
 now=`date "+%Y-%m-%d-%H-%M-%S"`
 today=`echo $now | cut -d'-' -f1-3`
