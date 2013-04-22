@@ -21,8 +21,22 @@ if [[ "false" == "`is_screensaver_running`" ]]; then
     RESULT=$?
     if [ $RESULT -eq 0 ]; then
       echo "screencapture succeeded: $now" >> ~/just3ws-cleeks.log
+      du -h $now.jpg >> ~/just3ws-cleeks.log
     else
       echo "screencapture failed: $now" >> ~/just3ws-cleeks.log
+    fi
+    echo "$working_dir/$now.jpg" >> ~/just3ws-cleeks.log
+    if [[ -a /usr/local/bin/mogrify ]]; then
+      /usr/local/bin/mogrify -compress JPEG -quality 30 $now.jpg &> ~/just3ws-cleeks.log
+      RESULT=$?
+      if [ $RESULT -eq 0 ]; then
+        echo "image compression succeeded: $now" >> ~/just3ws-cleeks.log
+        du -h $now.jpg >> ~/just3ws-cleeks.log
+      else
+        echo "image compression failed: $now" >> ~/just3ws-cleeks.log
+      fi
+    else
+      echo "Run \`brew install imagemagick\` to enable image compression." >> ~/just3ws-cleeks.log
     fi
   fi
 fi
