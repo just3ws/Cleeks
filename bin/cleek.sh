@@ -12,7 +12,9 @@ now=`date "+%Y-%m-%d-%H-%M-%S"`
 today=`echo $now | cut -d'-' -f1-3`
 
 if [[ "false" == "`is_screensaver_running`" ]]; then
-  screencapture -C -x -t jpg $now.jpg
+  if [[ ! -a ~/Pause-Cleeks ]]; then
+    screencapture -C -x -t jpg $now.jpg
+  fi
 fi
 
 IFS=$'\n'
