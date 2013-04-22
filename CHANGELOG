@@ -3,4 +3,8 @@
 Touch ~/Pause-Cleeks to temporarily disable the screencapture. Delete
 ~/Pause-Cleeks to resume.
 
+Compress images to approximately 1/3 original size using the mogrify tool from
+imagemagick suite. If it's not installed then a warning is written to log
+file.
 
+Added log file in home dir ~/just3ws-cleeks.log
